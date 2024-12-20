@@ -49,14 +49,14 @@ import { getVisualization } from './api/visualization.js'
 const data = ref(null)
 const loadData = async () => {
   data.value = await getVisualization()
-  console.log(data.value);
+  console.log('@@', data.value);
 }
 loadData()
 
 
-setInterval(() => {
-  loadData()
-}, 3000);
+// setInterval(() => {
+//   loadData()
+// }, 3000);
 </script>
 
 <style lang="scss" scoped></style>
