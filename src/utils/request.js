@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const service = axios.create({
 	baseURL: 'https://api.imooc-web.lgdsunday.club/api',
-	timeout: 5000
+	timeout: 50000
 })
 
 // 请求拦截器
