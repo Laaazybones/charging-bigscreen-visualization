@@ -56,7 +56,7 @@ loadData()
 
 setInterval(() => {
   loadData()
-}, 3000);
+}, 10000);
 </script>
 
 <style lang="scss" scoped></style>
