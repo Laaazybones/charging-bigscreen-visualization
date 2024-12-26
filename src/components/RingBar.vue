@@ -179,8 +179,6 @@ const renderChart = () => {
   myChart.setOption(options)
 }
 
-console.log('RingBar-target: ', target)
-
 // 监听数据的变化，重新渲染图表
 watch(
   () => props.data,
