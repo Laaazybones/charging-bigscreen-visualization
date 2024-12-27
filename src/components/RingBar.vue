@@ -9,6 +9,37 @@
 import { onMounted, ref, watch } from 'vue'
 import * as echarts from 'echarts'
 
+// 数据结构
+let abnormalData_mock = {
+  // abnormals =[
+  //   {
+  //     id: 1,
+  //     name: '华北',
+  //     value: 246
+  //   },
+  //   {
+  //     id: 2,
+  //     name: '华北',
+  //     value: 358
+  //   },
+  //   {
+  //     id: 3,
+  //     name: '华东',
+  //     value: 582
+  //   },
+  //   {
+  //     id: 4,
+  //     name: '中南',
+  //     value: 355
+  //   },
+  //   {
+  //     id: 5,
+  //     name: '西南',
+  //     value: 626
+  //   },
+  // ]
+}
+
 const props = defineProps({
   data: {
     type: Object,

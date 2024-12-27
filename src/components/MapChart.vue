@@ -36,7 +36,7 @@ const renderChart = () => {
       // 自动切换
       autoPlay: true,
       // 间隔时间
-      playInterval: 3000,
+      playInterval: 10000,
       // 位置
       left: '10%',
       right: '10%',
