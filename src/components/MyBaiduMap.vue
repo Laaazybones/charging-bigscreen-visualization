@@ -1,8 +1,4 @@
 <template>
-    <h1>
-       Test
-    </h1>
-    地图
     <baidu-map class="map" :zoom="12" :center="{lng: 116.404, lat: 39.915}" >
     </baidu-map>
 </template>
@@ -24,6 +20,6 @@ const handler = ({BMap, map}) => {
 <style>
 .map {
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 </style>
