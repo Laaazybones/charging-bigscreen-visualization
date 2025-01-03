@@ -8,6 +8,9 @@ import Demo from './views/Demo.vue'
 import Screen from './views/Screen.vue'
 // import router from './router'
 import BaiduMap from 'vue-baidu-map-3x'
+import ElementPlus from 'element-plus'
+import 'element-plus/theme-chalk/index.css' // 引入样式
+import { zhCn } from 'element-plus/es/locales.mjs'  // 语言
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,4 +27,4 @@ createApp(App).use(router).use(BaiduMap, {
     ak: 'JR04XYbAGLDdr0GbLgQIPsrboxgaZvJe',
     // v:'2.0',  // 默认使用3.0
     // type: 'WebGL' // ||API 默认API  (使用此模式 BMap=BMapGL)
-}).mount('#app')
+}).use(ElementPlus,{locale:zhCn}).mount('#app')

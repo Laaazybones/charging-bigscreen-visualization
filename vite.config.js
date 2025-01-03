@@ -12,5 +12,11 @@ export default defineConfig({
   },
   server: {
     hmr: true    // 热更新
+  },
+  css: {
+    // requireModuleExtension: true
+    // preprocessorOptions: {
+    //   scss: { api: 'modern-compiler' },
+    // }
   }
 })

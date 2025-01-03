@@ -92,7 +92,8 @@
           <MyBaiduMap class="w-full h-full"/>
         </div>
         <div class=" p-2 mb-2 bg-orange-500 h-1/4">
-          块二
+          <!-- 块二 -->
+           <DatePicker/>
         </div>
         <div class=" p-2 bg-orange-500 h-1/4">
           块三
@@ -125,6 +126,7 @@
 import { ref } from 'vue'
 import { getVisualization } from '../api/visualization.js'
 import MyBaiduMap from '../components/MyBaiduMap.vue'
+import DatePicker from '../components/utils/DatePicker.vue'
 
 const data = ref(null)
 const loadData = async () => {

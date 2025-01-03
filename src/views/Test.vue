@@ -3,12 +3,18 @@
        Test
     </h1>
     地图
-    <baidu-map class="map" :zoom="12" :center="{lng: 116.404, lat: 39.915}" >
-    </baidu-map>
+    <MyBaiduMap />
+
+    <div>
+      日期选择器
+      <DatePicker />
+    </div>
 </template>
 
 <script setup>
 import {ref,onMounted} from 'vue';
+import DatePicker from '../components/utils/DatePicker.vue';
+import MyBaiduMap from '../components/MyBaiduMap.vue';
 
 const center = ref({lng: 0, lat: 0});
 const zoom = ref(3);
