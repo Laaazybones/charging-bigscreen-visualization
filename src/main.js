@@ -12,6 +12,12 @@ import ElementPlus from 'element-plus'
 import 'element-plus/theme-chalk/index.css' // 引入样式
 import { zhCn } from 'element-plus/es/locales.mjs'  // 语言
 
+// 引入 echarts
+// import * as Echarts from 'echarts'
+// Vue.prototype.$echarts = Echarts
+/* vue3 */
+// App.config.globalProperties.$echarts = echarts
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [

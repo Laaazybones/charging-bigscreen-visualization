@@ -1,7 +1,7 @@
 <template>
     <div class="demo-date-picker">
         <div class="block">
-            <span class=" text-center">数据选择</span>
+            <span class=" text-center text-base font-semibold">数据选择</span>
             <br>
             <br>
             <el-date-picker v-model="value1" type="date" placeholder="选择数据日期"

@@ -87,34 +87,46 @@
       <!-- <div class=" flex-1 gap-2"> -->
       <!-- 左 -->
       <div class="w-1/4  mr-5 bg-opacity-50 bg-slate-200 p-3 flex flex-col">
-        <div class=" p-2 mb-2 bg-orange-500 h-1/2 overflow-hidden">
+        <div class=" p-2 mb-2 bg-gray-500/50 h-1/2 overflow-hidden">
           <!-- 块一 -->
-          <MyBaiduMap class="w-full h-full"/>
+           <ChargeStationMap class=" w-full h-full"/>
+          <!-- <MyBaiduMap class="w-full h-full"/> -->
         </div>
-        <div class=" p-2 mb-2 bg-orange-500 h-1/4">
+        <div class=" p-2 mb-2 bg-gray-500/50 h-1/4">
           <!-- 块二 -->
            <DatePicker/>
         </div>
-        <div class=" p-2 bg-orange-500 h-1/4">
+        <div class=" p-2 bg-gray-500/50 h-1/4">
           <!-- 块三 -->
            <Weather/>
         </div>
       </div>
 
       <!-- 中 -->
-      <div class="w-1/2 mr-5 flex flex-col">
-
+      <div class="w-1/2 bg-opacity-50 bg-slate-200 mr-5 flex flex-col">
+        <div class=" p-1 mb-1 h-auto">
+          <!-- 块六 -->
+           <!-- 地图 -->
+          <Map></Map>
+        </div>
+        <div class=" bg-opacity-25 bg-cyan-200">
+          <!-- 时间 -->
+            <!-- 块七 -->
+             <DateTime></DateTime>
+        </div>
       </div>
 
       <!-- 右 -->
       <div class="w-1/4 bg-opacity-50 bg-slate-200 p-3 flex flex-col">
-        <div class=" p-2 mb-2 bg-orange-500 h-1/2 overflow-hidden">
+        <div class=" p-2 mb-2  bg-gray-500/50 h-1/2 overflow-hidden">
           <!-- 块四 -->
-          <MyBaiduMap/>
+          <!-- <MyBaiduMap/> -->
+           <HeatMap/>
         </div>
-        <div class=" p-2 bg-orange-500 h-1/2 overflow-hidden">
+        <div class=" p-2  bg-gray-500/50 h-1/2 overflow-hidden">
           <!-- 块五 -->
-          <MyBaiduMap/>
+          <!-- <MyBaiduMap/> -->
+           <InternetMap/>
         </div>
       </div>
 
@@ -129,6 +141,11 @@ import { getVisualization } from '../api/visualization.js'
 import MyBaiduMap from '../components/MyBaiduMap.vue'
 import DatePicker from '../components/utils/DatePicker.vue'
 import Weather from '../components/utils/Weather.vue'
+import Map from '../components/utils/Map.vue'
+import DateTime from '../components/utils/DateTime.vue'
+import ChargeStationMap from '../components/utils/ChargeStationMap.vue'
+import HeatMap from '../components/utils/HeatMap.vue'
+import InternetMap from '../components/utils/InternetMap.vue'
 
 const data = ref(null)
 const loadData = async () => {

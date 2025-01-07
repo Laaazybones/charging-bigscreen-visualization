@@ -7,7 +7,7 @@ export async function getWeatherData() {
 		headers: {'X-QW-Api-Key':'958dc2572f934599bec8cf8c90863aaf'}
 	})
 
-	console.log('@get weather data: ', weatherData);
+	console.log('1@get weather data: ', weatherData);
 	return weatherData;
 }
 

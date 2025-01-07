@@ -16,19 +16,49 @@
   <div>
     天气数据：
     <!-- {{ weatherData }} -->
-      <Weather/>
+    <!-- <Weather /> -->
+    <WeatherTest/>
   </div>
+
+  <div>
+    地图111
+    <!-- 地图 -->
+     <Map></Map>
+    <!-- <MapChart class=" bg-opacity-50 bg-slate-800 p-3 mt-4 flex-1" :data="data.mapData" /> -->
+  </div>
+
+  <div>
+    日期111
+    <!-- <DateTime></DateTime> -->
+   
+</div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 import DatePicker from '../components/utils/DatePicker.vue';
 import MyBaiduMap from '../components/MyBaiduMap.vue';
-// import { getWeatherData } from '../utils/weatherRequest';
 // import axios from 'axios';
 import Weather from '../components/utils/Weather.vue';
+import Map from '../components/utils/Map.vue';
+import DateTime from '../components/utils/DateTime.vue';
 
-// getWeatherData();
+import { getWeatherData } from '../utils/weatherRequest';
+import WeatherTest from '../components/utils/WeatherTest.vue';
+
+
+
+// const response = ref(null);
+
+// async function getWeatherDataRaw(){
+//   response.value = await getWeatherData();
+//   console.log('2@response: ', response.value);
+// }
+
+// getWeatherDataRaw().then(() => {
+//   console.log('3@response: ', response.value);
+// });
+
 
 // const weatherDataRaw = null;
 // async function getWeatherData() {

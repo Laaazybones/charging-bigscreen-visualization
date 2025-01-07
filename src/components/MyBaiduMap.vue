@@ -1,5 +1,5 @@
 <template>
-    <baidu-map class="map" :zoom="12" :center="{lng: 116.404, lat: 39.915}" >
+    <baidu-map class="map" :zoom="10" :center="{lng: 104.066541, lat: 30.657299}" >
     </baidu-map>
 </template>
 
