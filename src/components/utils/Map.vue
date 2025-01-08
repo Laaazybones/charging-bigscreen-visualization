@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 100%; height: 500px;" >
+    <div class=" w-full h-full" >
         <div ref="chengduMap" class="w-full h-full">地图</div>
     </div>
 </template>

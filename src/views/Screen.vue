@@ -6,7 +6,7 @@
     <div class=" w-full text-white p-5 flex overflow-hidden justify-between pl-16 pr-20">
 
       <div class=" bg-[#182855]/[.90] grid place-items-center justify-center align-middle text-center text-[#3498db]  
-      border border-[#19BA8B]/[.17] border-solid  h-[35px] w-[180px] mr-5 ">
+      border border-[#19BA8B]/[.17] border-solid  h-[35px] w-[180px] mr-5">
         <button>充电场站分布图</button>
       </div>
 
@@ -89,16 +89,16 @@
       <div class="w-1/4  mr-5 bg-opacity-50 bg-slate-200 p-3 flex flex-col">
         <div class=" p-2 mb-2 bg-gray-500/50 h-1/2 overflow-hidden">
           <!-- 块一 -->
-           <ChargeStationMap class=" w-full h-full"/>
+          <ChargeStationMap class=" w-full h-full" />
           <!-- <MyBaiduMap class="w-full h-full"/> -->
         </div>
         <div class=" p-2 mb-2 bg-gray-500/50 h-1/4">
           <!-- 块二 -->
-           <DatePicker/>
+          <DatePicker />
         </div>
         <div class=" p-2 bg-gray-500/50 h-1/4">
           <!-- 块三 -->
-           <Weather/>
+          <Weather />
         </div>
       </div>
 
@@ -106,13 +106,13 @@
       <div class="w-1/2 bg-opacity-50 bg-slate-200 mr-5 flex flex-col">
         <div class=" p-1 mb-1 h-auto">
           <!-- 块六 -->
-           <!-- 地图 -->
+          <!-- 地图 -->
           <Map></Map>
         </div>
         <div class=" bg-opacity-25 bg-cyan-200">
           <!-- 时间 -->
-            <!-- 块七 -->
-             <DateTime></DateTime>
+          <!-- 块七 -->
+          <DateTime></DateTime>
         </div>
       </div>
 
@@ -121,12 +121,12 @@
         <div class=" p-2 mb-2  bg-gray-500/50 h-1/2 overflow-hidden">
           <!-- 块四 -->
           <!-- <MyBaiduMap/> -->
-           <HeatMap/>
+          <HeatMap />
         </div>
         <div class=" p-2  bg-gray-500/50 h-1/2 overflow-hidden">
           <!-- 块五 -->
           <!-- <MyBaiduMap/> -->
-           <InternetMap/>
+          <InternetMap />
         </div>
       </div>
 
@@ -161,7 +161,8 @@ const loadData = async () => {
   }
   console.log('@', data.value.testVal);
 }
-loadData()
+loadData();
+
 
 
 setInterval(() => {

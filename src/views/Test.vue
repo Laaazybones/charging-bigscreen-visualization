@@ -1,4 +1,21 @@
 <template>
+    <div>
+    测试弹窗
+  </div>
+  <div class="operate">
+    <button @click="open=true" class=" border bg-cyan-200/50 p-3 m-3 flex items-center justify-center">点击弹窗</button>
+  </div>
+  <Dialog v-if="open" style="min-width: 300px;min-height: 100px" :show=true>
+    <template #form>
+      <div class="dialogButtom">
+        <button @click=sumbit>确定</button>
+        <button @click=close>取消</button>
+      </div>
+    </template>
+  </Dialog>
+
+  <hr>
+  <br><br><br>
   <h1>
     Test
   </h1>
@@ -17,21 +34,25 @@
     天气数据：
     <!-- {{ weatherData }} -->
     <!-- <Weather /> -->
-    <WeatherTest/>
+    <WeatherTest />
   </div>
 
   <div>
     地图111
     <!-- 地图 -->
-     <Map></Map>
+    <Map></Map>
     <!-- <MapChart class=" bg-opacity-50 bg-slate-800 p-3 mt-4 flex-1" :data="data.mapData" /> -->
   </div>
 
   <div>
     日期111
     <!-- <DateTime></DateTime> -->
-   
-</div>
+
+  </div>
+
+  <hr>
+
+
 </template>
 
 <script setup>
@@ -46,52 +67,17 @@ import DateTime from '../components/utils/DateTime.vue';
 import { getWeatherData } from '../utils/weatherRequest';
 import WeatherTest from '../components/utils/WeatherTest.vue';
 
+import Dialog from '../components/utils/Dialog.vue';
 
+const open = ref(false)
+function sumbit() {
+  open.value = false
+}
+function close() {
+  open.value = false
+}
 
-// const response = ref(null);
-
-// async function getWeatherDataRaw(){
-//   response.value = await getWeatherData();
-//   console.log('2@response: ', response.value);
-// }
-
-// getWeatherDataRaw().then(() => {
-//   console.log('3@response: ', response.value);
-// });
-
-
-// const weatherDataRaw = null;
-// async function getWeatherData() {
-//   const requestData = await axios({
-//     url: 'https://devapi.qweather.com/v7/weather/3d?location=101270101',
-//     method: 'GET',
-//     headers: { 'X-QW-Api-Key': '958dc2572f934599bec8cf8c90863aaf' }
-//   });
-//   console.log('@weather data: ', requestData);
-//   weatherDataRaw = requestData;
-// }
-
-// console.log('@@', weatherDataRaw);
-
-
-
-// getWeatherData();
-// console.log('@@weather data: ', weatherDataRaw);
-
-// const viewWeatherData = ['fxDate', 'textDay', 'textNight', 'tempMax', 'tempMin', 'windDirDay', 'windDirNight'];
-
-// const weatherData = weatherDataRaw.map(item => {
-//   const newWeatherItem = {};
-//   viewWeatherData.forEach(field => {
-//     if (item.hasOwnProperty(field)) {
-//       newWeatherItem[field] = item[field];
-//     }
-//   });
-//   return newWeatherItem;
-// })
-
-// console.log(weatherData);
-
+// ----------------------------------------- 
 
 const center = ref({ lng: 0, lat: 0 });
 const zoom = ref(3);
@@ -102,14 +88,19 @@ const handler = ({ BMap, map }) => {
   center.value.lat = 39.915;
   zoom.value = 15;
 }
-
-// const weatherData = weatherRequest.getWeatherData();
-// console.log('@weatherData: ', weatherData);
 </script>
 
 <style>
 .map {
   width: 100%;
   height: 400px;
+}
+.dialogButtom{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* 间隔 */
+}
+.operate {
+  width: 100%;
 }
 </style>
