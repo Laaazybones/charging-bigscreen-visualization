@@ -4,8 +4,7 @@
             <span class=" text-center text-base font-semibold">数据选择</span>
             <br>
             <br>
-            <el-date-picker v-model="value1" type="date" placeholder="选择数据日期"
-                :default-value="new Date(2025, 0, 1)" />
+            <el-date-picker v-model="value1" type="date" :placeholder="dateView" :default-value="new Date()" />
         </div>
         <!-- <div class="block">
         <span class="demonstration">daterange</span>
@@ -21,10 +20,32 @@
 </template>
 
 <script lang="js" setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
-const value1 = ref('')
-const value2 = ref('')
+
+// 获取当前日期
+const defaultDate = new Date();
+const year = defaultDate.getFullYear();
+const month = String(defaultDate.getMonth() + 1).padStart(2, '0');  // 补零
+const day = String(defaultDate.getDate()).padStart(2, '0'); // 补零
+
+// 计算属性：生成 "month-day" 格式的日期字符串
+const dateView = `${year}-${month}-${day}`;
+
+// el-date-picker 的 v-model 绑定值
+const value1 = ref('');
+
+
+// const value2 = ref('')
+
+
+// let defaultDate = new Date();
+// let year = defaultDate.getFullYear();
+// let month = defaultDate.getMonth() + 1;
+// let day = defaultDate.getDate();
+// const dateView = ref('${month}-${day}')
+
+
 </script>
 <style scoped>
 .demo-date-picker {

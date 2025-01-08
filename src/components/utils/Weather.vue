@@ -60,35 +60,35 @@ async function weatherDataHandler() {
 
 weatherDataHandler();
 
-const weather = [
-    {
-        'fxDate': '01.06',
-        'textDay': '阴',
-        'textNight': '小雨',
-        'tempMax': '13',
-        'tempMin': '1',
-        'windDirDay': '北风',
-        'windDirNight': '北风'
-    },
-    {
-        'fxDate': '01.07',
-        'textDay': '晴',
-        'textNight': '晴',
-        'tempMax': '14',
-        'tempMin': '2',
-        'windDirDay': '西风',
-        'windDirNight': '北风'
-    },
-    {
-        'fxDate': '01.08',
-        'textDay': '多云',
-        'textNight': '晴',
-        'tempMax': '15',
-        'tempMin': '3',
-        'windDirDay': '西南风',
-        'windDirNight': '南风'
-    },
-]
+// const weather = [
+//     {
+//         'fxDate': '01.06',
+//         'textDay': '阴',
+//         'textNight': '小雨',
+//         'tempMax': '13',
+//         'tempMin': '1',
+//         'windDirDay': '北风',
+//         'windDirNight': '北风'
+//     },
+//     {
+//         'fxDate': '01.07',
+//         'textDay': '晴',
+//         'textNight': '晴',
+//         'tempMax': '14',
+//         'tempMin': '2',
+//         'windDirDay': '西风',
+//         'windDirNight': '北风'
+//     },
+//     {
+//         'fxDate': '01.08',
+//         'textDay': '多云',
+//         'textNight': '晴',
+//         'tempMax': '15',
+//         'tempMin': '3',
+//         'windDirDay': '西南风',
+//         'windDirNight': '南风'
+//     },
+// ]
 
 </script>
 <style scoped></style>
