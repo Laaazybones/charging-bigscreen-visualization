@@ -1,8 +1,5 @@
 <template>
-  <div class=" flex justify-center items-center">
-    <span class=" text-center text-base font-semibold">【车流量热力图】</span>
-  </div>
-  <baidu-map class="map" :zoom="10" :center="{ lng: 104.066541, lat: 30.657299 }">
+  <baidu-map class="map" :zoom="10" :center="{ lng: 104.066541, lat: 30.657299 }" :scroll-wheel-zoom="true" @ready="handleMapReady">
   </baidu-map>
 </template>
 
@@ -11,6 +8,13 @@ import { ref, onMounted } from 'vue';
 
 const center = ref({ lng: 0, lat: 0 });
 const zoom = ref(3);
+const map = ref(null); // 存储地图实例
+
+// 地图初始化完成后的回调
+const handleMapReady = ({ map: mapInstance }) => {
+  map.value = mapInstance; // 保存地图实例
+  console.log('地图已初始化');
+};
 
 const handler = ({ BMap, map }) => {
   console.log(BMap, map);

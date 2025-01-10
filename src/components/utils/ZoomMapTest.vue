@@ -1,26 +1,30 @@
-<script setup>
-defineProps(['show'])
-
-import Map from './Map.vue';
-
-function closeCanvas() {
-    this.show = false;
-}
-</script>
-
-
 
 <template>
     <div v-if="show">
+        <!-- <div class="canvas flex items-center justify-center bg-cyan-900/75 w-11/12 h-[600px] overflow-hidden p-5 m-5 border border-solid border-cyan-200/50"> -->
         <div class="canvas flex items-center justify-center bg-cyan-900/75 w-11/12 h-[600px] overflow-hidden p-5 m-5 border border-solid border-cyan-200/50">
-            <button class="absolute top-2 right-2 p-2 bg-red-500 text-white rounded-full hover:bg-red-600"
+            <button class="absolute h-8 w-8 top-2 right-2 p-2 bg-red-500 text-white flex items-center justify-center rounded-full hover:bg-red-600"
             @click="closeCanvas">
-                x
+                ×
             </button>
             <Map></Map>
         </div>
     </div>
 </template>
+
+<script setup>
+import Map from './Map.vue';
+
+const props = defineProps(['show'])
+const emit = defineEmits(['update:show'])
+
+function closeCanvas() {
+    emit('update:show', false);
+    console.log('修改成功，show:', props.show)
+}
+
+</script>
+
 
 <style scoped>
 .box {

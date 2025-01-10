@@ -1,8 +1,5 @@
 <template>
-  <div class=" flex justify-center items-center">
-    <span class=" text-center text-base font-semibold">【停车场动态图】</span>
-  </div>
-  <baidu-map class="map" :zoom="10" :center="{ lng: 104.066541, lat: 30.657299 }">
+  <baidu-map class="map" :zoom="10" :center="{ lng: 104.066541, lat: 30.657299 }" :scroll-wheel-zoom="true">
   </baidu-map>
 </template>
 
